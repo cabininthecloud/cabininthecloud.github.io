@@ -3,13 +3,13 @@ title: Contact
 layout: default
 ---
 {% if jekyll.environment == "production" %}
-	{% assign actionurl = "contact.cabininthecloud.com" %}
+	{% assign actionurl = "https://contact.cabininthecloud.com" %}
 {% else %}
-	{% assign actionurl = "localhost" %}
+	{% assign actionurl = "http://localhost" %}
 {% endif %}
 
 <h1>Contact</h1>
-<form action="http://{{actionurl}}/contact.php" method="POST">
+<form action="{{actionurl}}/contact.php" method="POST">
 	 <div class="row">
     <label for="name">Name<span class="required">*</span></label>
     <input type="text" id="name" name="name" required/>
