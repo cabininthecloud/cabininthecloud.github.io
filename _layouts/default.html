@@ -1,0 +1,27 @@
+<html lang="en">
+{% include head.html %}
+<body>
+  {% include header.html %}
+  <div class="page" id={{page.title | remove: " " | downcase}}>
+    <aside>
+      {% if page.url == "/" %}
+      <div id="aside-content">
+        <p id="observation">Observation</p>
+        <p id="creativity">Creativity</p>
+        <p id="humility">Humility</p>
+        <p id="repeat">Repeat</p>
+      </div>
+      {% endif %}
+    </aside>
+    {% if page.url == "/" %}
+    <div id="image-wrap">
+      <img src="/assets/images/headshot.jpg" alt="headshot" />
+    </div>
+    {% endif %}
+    <main>  
+      {{ content }}
+      {% include footer.html %}
+    </main>
+  </div>
+</body>
+</html>

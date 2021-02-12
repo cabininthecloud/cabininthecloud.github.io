@@ -1,0 +1,59 @@
+---
+title: About
+layout: default
+---
+   <h1 role="button">CREATIVITY <span>&#x25BD;</small></h1>
+   <div class="modal-content">
+      <button>&times;</button>
+      <h2>CREATIVITY</h2>
+      <p>I am a Software Solutionary who works creatively and instinctively to find the HAPPY PATH FORWARD. I operate with finesse and discernment to balance deadlines with a desire to build resilient code. This combination of intuitive engineering and sensitive diagnostics help to create healthy eco-systems for the code being engaged. My forte is simplicity in creating concise, eco-friendly code that merges well and plays nicely.</p>
+   </div>
+
+   <h1 role="button">COLLABORATION <span>&#x25BD;</span></h1>
+   <div class="modal-content">
+    <button>&times;</button>
+    <h2>COLLABORATION</h2>
+    <p>The key to collaboration is humility. It’s here that I love listening to my teams’ ideas to find the best workable solution moving forward. My approachable manner helps create a space for productive dialogue to take place. I have a knack for identifying the best strategies leveraging the expertise of a colleague’s proven track record or allowing room for someone new to “have a go-at-it.” This is my sweet spot; helping to steer those moments where colleagues are honored, ideas considered, and direction provided.</p>
+   </div>
+
+   <h1 role="button">CUTTING EDGE <span>&#x25BD;</span></h1>
+   <div class="modal-content">
+    <button>&times;</button>
+    <h2>CUTTING EDGE</h2>
+    <p>I have a penchant for the new. It’s who I am; though it certainly doesn’t promise a smooth ride always. I love learning, researching and putting all this to good use in moving forward. EvoText strove to support dreams and innovation by creating what became affectionately known as “Blue Sky Projects.” One such project became a vision realized and is currently being released to the educational community. Companies and teams that provide real solutions to current day challenges is my aim.</p>
+   </div>
+
+   <h1 role="button">CONSULTANT <span>&#x25BD;</span></h1>
+   <div class="modal-content">
+    <button>&times;</button>
+    <h2>CONSULTANT</h2>
+    <p>I have an innate ability to bridge gaps for clients by making sense of technical speak to the non-technical. I am adept in addressing needs whether it’s the Architect’s “BIG PICTURE”, the Engineer’s technical problem-solving, the Developer’s coding or the Designer’s vision. I have a capacity to help harness solutions for companies looking for their own Happy Path Forward.</p>
+   </div>
+
+   <div id="modal-overlay"></div>
+
+   <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const main = document.querySelector('main');
+        const modalOverlay = document.getElementById("modal-overlay");
+
+        Array.prototype.slice.call(main.querySelectorAll('h1')).forEach(function (modalTrigger) {
+          const modalContent = modalTrigger.nextElementSibling;
+          const closeButton = modalContent.querySelector('button');
+          
+          modalTrigger.onclick = () => {
+            const close = () => {
+              modalOverlay.style.display = 'none';
+              modalContent.classList.remove('active');
+              closeButton.removeEventListener('click', close);
+              modalOverlay.removeEventListener('click', close);
+            }
+            modalOverlay.style.display = 'block';
+            modalContent.classList.add('active');
+            closeButton.addEventListener('click', close);
+            modalOverlay.addEventListener('click', close);
+
+          }
+        });
+      });
+   </script>

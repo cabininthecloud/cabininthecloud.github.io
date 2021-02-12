@@ -1,0 +1,8 @@
+- text: About
+  url: /about
+
+- text:  Contact
+  url: /contact
+
+- text: Resume &#x2193;
+  url: /assets/downloads/EricSchmidtResume.pdf

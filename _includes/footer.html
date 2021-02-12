@@ -1,0 +1,14 @@
+<footer>
+  <p>&copy;<span id="copyright-year"></span> Eric Schmidt</p>
+</footer>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const startYear = 2021
+    const currentYear = new Date().getFullYear();
+    let add="";
+    if(currentYear > startYear) {
+      add=`-${currentYear}`;
+    }
+    document.getElementById("copyright-year").innerText = `${startYear}${add}`;
+});
+</script>
